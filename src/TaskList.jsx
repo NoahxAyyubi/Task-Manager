@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./styles.css";
 
 const TaskList = () => {
   const [tasks, setTasks] = useState([]);
@@ -38,7 +39,7 @@ const TaskList = () => {
       );
 
       const data = await response.json();
-      setTasks([...tasks, data]);
+      setTasks([data, ...tasks]); // Add new task at the beginning of the array
       setNewTask("");
     } catch (error) {
       console.error("Error adding task:", error);
@@ -92,6 +93,19 @@ const TaskList = () => {
 
   return (
     <div>
+      <h2>Add New Task</h2>
+      <div className="add-task">
+        <input
+          type="text"
+          value={newTask}
+          onChange={(e) => setNewTask(e.target.value)}
+          placeholder="New Task"
+        />
+        <button className="add-btn" onClick={handleAddTask}>
+          Add Task
+        </button>
+      </div>
+
       <h2>Task List</h2>
       <ul className="task-list">
         {tasks.map((task) => (
@@ -130,18 +144,6 @@ const TaskList = () => {
           </li>
         ))}
       </ul>
-
-      <div className="add-task">
-        <input
-          type="text"
-          value={newTask}
-          onChange={(e) => setNewTask(e.target.value)}
-          placeholder="New Task"
-        />
-        <button className="add-btn" onClick={handleAddTask}>
-          Add Task
-        </button>
-      </div>
     </div>
   );
 };

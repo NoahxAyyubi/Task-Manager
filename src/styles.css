@@ -1,0 +1,85 @@
+/* styles.css */
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Display tasks in a column */
+  align-items: flex-start; /* Align tasks to the left */
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f9f9f9;
+  width: 100%; /* Ensure full width for each task item */
+  position: relative; /* Enable relative positioning for task items */
+}
+
+.task-item:hover {
+  background-color: #e9e9e9;
+}
+
+.task-details {
+  display: flex;
+  align-items: center;
+}
+
+.task-details span {
+  margin-right: 10px;
+}
+
+.task-edit {
+  display: flex;
+  flex-direction: column; /* Align edit buttons in a column */
+  position: absolute; /* Position edit buttons within the task item */
+  top: 50%; /* Vertically center edit buttons */
+  left: 50%; /* Horizontally center edit buttons */
+  transform: translate(-50%, -50%); /* Center edit buttons */
+}
+
+.task-edit input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px; /* Add margin to separate input and buttons */
+}
+
+.edit-btn,
+.delete-btn,
+.add-btn {
+  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Edit button style */
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Delete button style */
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Add button style */
+.add-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Center the Add Task section */
+.add-task {
+  text-align: center;
+  margin-top: 20px;
+}
