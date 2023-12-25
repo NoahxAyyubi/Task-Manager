@@ -1,13 +1,30 @@
-/* styles.css */
+/* Add rounded border to the Todo app container */
+.todo-app {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+}
 
+/* Style the headers with a darker tone of yellow */
+h2 {
+  background-color: #ffc107;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  color: #343a40; /* Dark text color on a yellow background */
+}
+
+/* Task list styling */
 .task-list {
   list-style: none;
   padding: 0;
   display: flex;
-  flex-direction: column; /* Display tasks in a column */
-  align-items: flex-start; /* Align tasks to the left */
+  flex-direction: column;
+  align-items: flex-start;
 }
 
+/* Task item styling */
 .task-item {
   display: flex;
   justify-content: space-between;
@@ -16,8 +33,9 @@
   padding: 10px;
   margin: 5px 0;
   background-color: #f9f9f9;
-  width: 100%; /* Ensure full width for each task item */
-  position: relative; /* Enable relative positioning for task items */
+  width: 100%;
+  position: relative;
+  border-radius: 8px; /* Rounded corners */
 }
 
 .task-item:hover {
@@ -35,11 +53,11 @@
 
 .task-edit {
   display: flex;
-  flex-direction: column; /* Align edit buttons in a column */
-  position: absolute; /* Position edit buttons within the task item */
-  top: 50%; /* Vertically center edit buttons */
-  left: 50%; /* Horizontally center edit buttons */
-  transform: translate(-50%, -50%); /* Center edit buttons */
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .task-edit input[type="text"] {
@@ -47,33 +65,38 @@
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-bottom: 10px; /* Add margin to separate input and buttons */
+  margin-bottom: 10px;
 }
 
-.edit-btn,
-.delete-btn,
-.add-btn {
+/* Edit button style */
+.edit-btn {
   cursor: pointer;
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
   font-weight: bold;
-}
-
-/* Edit button style */
-.edit-btn {
   background-color: #007bff;
   color: white;
 }
 
 /* Delete button style */
 .delete-btn {
+  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
   background-color: #dc3545;
   color: white;
 }
 
 /* Add button style */
 .add-btn {
+  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
   background-color: #28a745;
   color: white;
 }
