@@ -1,5 +1,5 @@
 import React from "react";
-import TaskList from "./TaskList";
+import TaskList from "./components/TaskList";
 import todoAppImage from "./resources/kisspng-computer-icons-encapsulated-postscript-5adab660706b60.0873723815242829764605.png";
 
 function App() {
